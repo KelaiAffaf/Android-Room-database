@@ -29,12 +29,14 @@ class MainActivity : AppCompatActivity() {
         println(listActos.size)
         println("hellooooooooooooooooooooooooo")
 
-    btn_movie.setOnClickListener {
-        val intent = Intent( this, ListActivity::class.java)
-        this.startActivity(intent)
-    }
+        btn_movie.setOnClickListener {
+            val intent = Intent( this, ListActivity::class.java)
+            intent.putExtra("from", "movie")
+            this.startActivity(intent)
+        }
         btn_actor.setOnClickListener {
             val intent = Intent( this, ListActivity::class.java)
+            intent.putExtra("from", "actor")
             this.startActivity(intent)
         }
 
