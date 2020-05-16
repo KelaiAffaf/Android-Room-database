@@ -1,5 +1,6 @@
 package com.example.tp7
 
+
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,7 +15,6 @@ class movie_Form : AppCompatActivity(), AddActorFragment.OnFragmentInteractionLi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie__form)
-
         var from = intent.getStringExtra("from")
         System.out.println("I'm coming from: " + from)
 

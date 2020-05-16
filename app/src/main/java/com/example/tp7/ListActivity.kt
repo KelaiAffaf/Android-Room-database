@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_list.*
-import java.util.*
+
 
 class ListActivity : AppCompatActivity() {
 
@@ -25,6 +25,7 @@ class ListActivity : AppCompatActivity() {
             }
         }
 
+
         add_btn.setOnClickListener {
             val intent = Intent( this, movie_Form::class.java)
             intent.putExtra("from", from)
@@ -42,7 +43,6 @@ class ListActivity : AppCompatActivity() {
 
         return data
     }
-
     fun loadActors():List<Actor> {
         val data = mutableListOf<Actor>()
         data.add(Actor(1, "firstName 1","lastName 1"))
